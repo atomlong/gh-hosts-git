@@ -1,0 +1,9 @@
+post_remove() {
+  systemctl disable gh-hosts.timer
+  systemctl stop gh-hosts.timer
+  systemctl disable gh-hosts.service
+  systemctl stop gh-hosts.service
+  sed -i '/# GitHub Start/,/# GitHub End/d' /etc/hosts
+}
+
+# vim:set ts=2 sw=2 et:

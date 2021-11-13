@@ -3,7 +3,7 @@
 _pkgname="gh-hosts"
 pkgname="gh-hosts-git"
 pkgver=20211113
-pkgrel=2
+pkgrel=3
 pkgdesc="Adding GitHub IPs to hosts"
 arch=('any')
 url="https://github.com/atomlong/github-hosts"
@@ -32,6 +32,7 @@ build() {
 
 package() {
   cd "$srcdir/$_pkgname"
+  install="${_pkgname}.install"
   install -D -m755 gh-hosts "${pkgdir}/usr/bin/gh-hosts"
   install -Dm644 ../${_pkgname}.service ${pkgdir}/usr/lib/systemd/system/${_pkgname}.service
   install -Dm644 ../${_pkgname}.timer ${pkgdir}/usr/lib/systemd/system/${_pkgname}.timer
