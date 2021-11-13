@@ -1,7 +1,7 @@
 pkgbase = gh-hosts-git
 	pkgdesc = Adding GitHub IPs to hosts
 	pkgver = 20211113
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/atomlong/github-hosts
 	arch = any
 	license = custom
@@ -10,6 +10,10 @@ pkgbase = gh-hosts-git
 	conflicts = gh-hosts
 	options = !lto
 	source = gh-hosts::git+https://github.com/atomlong/github-hosts.git
+	source = gh-hosts.service
+	source = gh-hosts.timer
 	sha256sums = SKIP
+	sha256sums = f05786c4154cf329dc51005ae43262f5a6acbea4c3b76eb417b6e8e52ed1c178
+	sha256sums = 870c705f5bd28ae4d7f8e5d432cbdc0f39bc61c67ae179d31cd0d953c97ee308
 
 pkgname = gh-hosts-git

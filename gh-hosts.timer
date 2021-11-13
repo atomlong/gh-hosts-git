@@ -1,0 +1,10 @@
+[Unit]
+Description="Time update github hosts repetitively"
+
+[Timer]
+# Run on every hour
+OnCalendar=hourly
+Persistent=true
+
+[Install]
+WantedBy=timers.target
